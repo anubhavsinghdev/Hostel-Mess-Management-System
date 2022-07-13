@@ -1,0 +1,78 @@
+<%- include("header.ejs") -%>
+<style>
+    .card-body {
+        height: 18em;
+    }
+</style>
+<div class="container py-3">
+    <header>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Pricing</h1>
+            <p class="fs-5 text-muted">
+                Select food from different price range.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Minimal</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">₹2500<small class="text-muted fw-light">/mo</small>
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Breakfast</li>
+                            <li>Lunch</li>
+                            <li>Dinner</li>
+                        </ul>
+                        <a href="/register-for-food">
+                        <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up Now</button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                        <h4 class="my-0 fw-normal">Foodie</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">₹3500<small class="text-muted fw-light">/mo</small>
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Breakfast</li>
+                            <li>Lunch</li>
+                            <li>Dinner(Veg/Non-Veg)</li>
+                            <li>Evening Snacks</li>
+                        </ul>
+                        <a href="/register-for-food"></a>
+                        <button type="button" class="w-100 btn btn-lg btn-primary">Give me Food</button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-white bg-primary border-primary">
+                        <h4 class="my-0 fw-normal">Body Builders</h4>
+                    </div>
+                    <div class="card-body">
+                        <h1 class="card-title pricing-card-title">₹4500<small class="text-muted fw-light">/mo</small>
+                        </h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Breakfast</li>
+                            <li>Lunch</li>
+                            <li>Dinner(Veg/Non-Veg)</li>
+                            <li>Salads and Milk</li>
+                        </ul>
+                        <a href="/register-for-food"></a>
+                        <button type="button" class="w-100 btn btn-lg btn-primary">Give me Healty Food</button>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>

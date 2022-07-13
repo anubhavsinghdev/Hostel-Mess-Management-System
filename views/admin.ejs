@@ -1,0 +1,48 @@
+<%- include("header.ejs") -%>
+
+<% for ( let i = 0 ; i < docs.length ; i++ ) { %>
+<div class="card text-center">
+    <div class="card-header">
+        <%= docs[i].fullname %>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Username : <%= docs[i].username %></h5>
+        <p class="card-text">Email : <%= docs[i].email %></p>
+        <p class="card-text">Phone Number : <%= docs[i].phoneNum %></p>
+        <p class="card-text">Food Type :
+            <% if(docs[i].foodType === -1) { %>
+            Not Yet Registed for Fooding
+            <% } else if(docs[i].foodType === 1) { %>
+            Registed for Minimal Fooding
+            <% } else if(docs[i].foodType === 2) { %>
+            Registed for Foodie Fooding
+            <% } else if(docs[i].foodType === 3){ %>
+            Registed for Body Builder Fooding
+            <% } %>
+        </p>
+        <p class="card-text">Payment Method :
+            <% if(docs[i].paymentMethod === -1) { %>
+            No Payment
+            <% } else if(docs[i].paymentMethod === 1) { %>
+            Cash
+            <% } else if(docs[i].paymentMethod === 2) { %>
+            Online
+            <% } else if(docs[i].paymentMethod === 3){ %>
+            Postpaid
+            <% } %>
+        </p>
+        <p class="card-text">Owner :
+            <% if(docs[i].isOwner) { %>
+            <span style="color: #198754 !important;">
+                <%= docs[i].username %> is an Owner
+            </span>
+            <% } else { %>
+            <span style="color: #dc3545 !important">
+                <%= docs[i].username %> is not an Owner
+            </span>
+            <% } %>
+        </p>
+    </div>
+</div>
+
+<% } %>

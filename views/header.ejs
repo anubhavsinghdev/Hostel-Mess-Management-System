@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/logo-black.png" type="image/x-icon">
+    <title>Hostel Mess Management System</title>
+</head>
+
+<body>
+    <style>
+        .logo {
+            width: 3rem;
+            height: auto;
+            padding-right: 10px;
+            margin-right: 10px;
+        }
+    </style>
+    <header class="p-3 bg-dark text-white ">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="logo" src="/logo-white.png" alt="">
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="/menu" class="nav-link px-2 text-white">Menu</a></li>
+                    <li><a href="/pricing" class="nav-link px-2 text-white">Pricing</a></li>
+                    <li><a href="/register-for-food" class="nav-link px-2 text-white">Register for Food</a></li>
+                    <li><a href="/admin" class="nav-link px-2 text-white">Owner Area</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <% if(currentUser == undefined) { %>
+                    <a href="/login">
+                        <button type="button" class="btn btn-outline-light me-2">
+                            Login
+                        </button>
+                    </a>
+                    <a href="/register">
+                        <button type="button" class="btn btn-warning">
+                            Sign-up
+                        </button>
+                    </a>
+                    <% } %>
+                    <% if(currentUser != undefined) { %>
+                    <a href="/logout" class="btn btn-primary">Logout</a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </header>

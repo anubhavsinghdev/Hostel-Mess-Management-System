@@ -1,0 +1,49 @@
+<%- include("header.ejs") -%>
+<style>
+  div.bg-dark.px-4.py-5 {
+    scroll-behavior: smooth;
+  }
+
+  .hero-logo {
+    width: 5em;
+    height: auto;
+  }
+
+  .welcome-msg {
+    color: white;
+    font-size: 1.5em;
+    text-transform: capitalize;
+  }
+</style>
+<div class="bg-dark text-secondary px-4 py-5 text-center" style="height: 100vh;">
+  <% if(currentUser != undefined) { %>
+  <p class="welcome-msg">
+    Welcome <%= currentUser %>
+  </p>
+  <% } %>
+  <div class="py-5">
+    <img class="hero-logo" src="/logo-white.png" alt="">
+    <h1 class="display-5 fw-bold text-white">Hostel Mess Management System</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="fs-5 mb-4">
+
+        Here the mess owners can see the students who have regsitered for mess and the students can register for the
+        mess food.
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <% if(currentUser == undefined) { %>
+        <a href="/login">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Login</button>
+        </a>
+        <a href="/register">
+          <button type="button" class="btn btn-outline-light btn-lg px-4">Register</button>
+        </a>
+        <% } else { %>
+        <a href="/logout">
+          <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Logout</button>
+        </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

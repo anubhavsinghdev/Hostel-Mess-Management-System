@@ -1,0 +1,40 @@
+<%- include("header.ejs") -%>
+
+<body class="text-center">
+
+    <main class="form-signin">
+        <form action="/register" method="post">
+            <img class="mb-4" src="/logo-black.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 fw-normal">Please Register Here</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username"
+                    required>
+                <label for="floatingInput">Username</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Full Name" name="fullname"
+                    required>
+                <label for="floatingInput">Full Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email" required>
+                <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-floating">
+                <input type="tel" class="form-control" id="floatingInput" placeholder="Phone Number" name="phno"
+                    required>
+                <label for="floatingInput">Phone Number</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password"
+                    required>
+                <label for="floatingPassword">Password</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022</p>
+        </form>
+    </main>
+</body>
+
+</html>
